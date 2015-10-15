@@ -16,7 +16,7 @@ var exports = {
 					return false;
 				}
 				imgList.each(function(){
-					if(that.isVisual(this)) {
+					if(that.isVisual(this) && $(this).attr(that.srcStore)) {
 						$(this).attr("src",$(this).attr(that.srcStore)).removeAttr(that.srcStore).removeClass(that.cls);
 					}
 				})
